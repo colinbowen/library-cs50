@@ -1,12 +1,16 @@
-{% extends "base.html" %} {% block title %}Index{% endblock %} {% block head %}
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block head %}
 {{ super() }}
 <style type="text/css">
   .important {
-    color: #336699;
+    color: #29425a;
   }
 </style>
 {% endblock %} {% block content %}
-<h1>Index</h1>
-<p class="important">
-  Welcome on my awesome homepage. {% endblock %}
-</p>
+
+<h1>{{ pageTitle }}</h1>
+<p class="important">Welcome on my awesome homepage.</p>
+<p>Insert website here for homepage</p>
+{% for book in books %}
+<p>{{ book.title }}</p>
+<p>By {{ book.author }}</p>
+{% endfor %} {% endblock %}

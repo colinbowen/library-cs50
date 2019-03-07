@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% block title %}About{% endblock %} {% block head %}
+{{ super() }}
+<style type="text/css">
+  .important {
+    color: #29425a;
+  }
+</style>
+{% endblock %} {% block content %}
+<h1>{{ pageTitle }}</h1>
+<p class="important">About this webiste.</p>
+<p>Insert website here for about page.</p>
+
+{% endblock %}
